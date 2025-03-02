@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+ 
+      <style>
+        body, html {
+          height: 100%;
+        }
+
+       *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+        .navbar {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: white;
+    z-index: 1000;
+    }
+
+    
+    .navbar-brand{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family:'Dancing Script', cursive;
+    color: black;
+}
+
+    .navbar-brand:hover{
+        color: black;
+    }
+
+    .nav-link{
+        color: black;
+        margin-left: 60px;
+        text-transform: uppercase;
+    }
+
+    .nav-link:hover{
+        color: black;
+    }
+
+    .Search{
+        height: 40px;
+        width: 100%;
+        border-radius: 20px;
+        margin-right: -35px;
+        outline: none;
+        border: 2px solid rgb(255, 0, 81);
+    }
+    .btn0{
+        background-color:rgb(255, 0, 81);
+        height: 40px;
+        width:40%;
+        border-radius: 40px;
+        color: white;
+        border: none;
+    }
+
+    .parallax {
+          /* The image used */
+          background-image: url("/static/images/about1.jpg");
+        
+          /* Full height */
+          height: 100%;
+        
+          /* Create the parallax scrolling effect */
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        .custom-link {
+    color: rgb(228, 228, 151); /* Change link color */
+    text-decoration: none; /* Remove underline */
+  }
+    .form{
+        padding-left: 250px;
+        padding-right: 250px;
+    }
+    .card-body h5 {
+            font-size: 16px; /* Smaller font size */
+            font-weight: bold;
+            color: black;
+        }
+    
+        .card-body p {
+            font-size: 10px; /* Reduce paragraph font size */
+            color: black; /* Set text color to black */
+        }
+        .f1{
+            margin-bottom: 20px;
+            height: 180px;
+            width:100%; 
+        }
+        .black-section {
+            padding-top: 1px;
+            padding-bottom: 10px;
+            background-color: rgb(39, 32, 32);
+            color: white;
+            width:100%;
+            font-size: 12px;
+        }
+        
+    
+        
+        </style>
+</head>
+<body>
+  
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Photo Gallery</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link active" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/add">Add Image</a>
+                        </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control px-4 Search" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn0 btn-outline-success" type="submit">Search</button>
+                </form>
+                </div>
+            </div>
+        </nav>
+
+        <div class="parallax"></div>
+
+        <div style=" background-color:white;color: black;font-size:20px">
+          <div class="about px-5 py-5">
+          <h2>About Us </h2>
+          <p>Welcome to the Digital Photo Gallery, a digital platform dedicated to showcasing stunning photography from talented artists around the globe. Explore our curated collections, and immerse yourself in the world of visual storytelling. Whether you're an art lover, a photography enthusiast, or just seeking inspiration, we have something for everyone.</h3></p>
+          Whether you're an art lover seeking the beauty of the world through the lens, a photography enthusiast passionate about the craft, or someone simply looking for inspiration, It offers something for you.
+
+          Our curated collections feature a diverse range of genres, from breathtaking landscapes and intimate portraits to bold abstracts and thought-provoking documentary pieces. Each image tells its own story, inviting you to explore new worlds, emotions, and narratives through the power of photography.
+          
+          At Digital Photo Gallery, we believe that photography is more than just an image—it's a window into different cultures, ideas, and experiences. Our platform allows you to connect with these stories and immerse yourself in the transformative power of visual art. Whether you're here to admire, purchase, or learn more about the photographers behind the lens, we welcome you to embark on a journey of discovery and creativity.  
+          <h2>Our Mission </h2>
+          <p>
+           At Digital Photo Gallery, we believe in the power of photography to capture moments, emotions, and stories. Our mission is to make beautiful, thought-provoking images accessible to all, providing a space where creativity can flourish and photography can connect people across cultures and continents.</p>
+           <h2>What We Offer</h2>
+           <p>
+             <ul>
+               <li><b>Curated Exhibitions: </b> Regularly updated exhibitions featuring a diverse range of photographic styles and themes.</li>
+               <li><b>Virtual Tours:</b> Explore our gallery through immersive virtual experiences, bringing the art to you wherever you are.</li>
+               <li><b>Artist Spotlights:</b> Get to know the photographers behind the lens with exclusive artist profiles and insights into their work.</li>
+           
+               </p>
+        </div>
+        </div>
+
+
+
+<section class="black-section mt-5">
+            
+  <div class="container mt-5 footer-items">
+      <div class="row mt-5 py-4">
+          <div class="col-lg-3 col-sm-12">
+             
+                      <h4> Customer Care
+                      </h4>
+                      <p>Need help? Our support team is available 24/7 to assist you.</p>
+                      
+                      <p>📧 Email: support@photoalbum.com</p>
+                      <p>📞 Phone: +1 234 567 890</p>
+                  
+          </div>
+          <div class="col-lg-3 col-sm-12">
+              
+                      <h4> FAQs
+                          </h4>
+                          <p>🔹<b> How do I upload photos?</b>
+                              Go to the Upload section, select your images, and click Submit.</p>
+                              <p>🔹<b>How do I contact support?</b>
+                                  Email us at support@photoalbum.com </p>
+                 
+          </div>
+          <div class="col-lg-3 col-sm-12">
+              
+                     <h4>Our Company</h4>
+                     <p>PhotoAlbum is a leading digital photo storage and sharing platform. 
+                      We help users upload, organize, and share their favorite moments effortlessly.</p>
+                      <p>
+                          🌐 Website: www.photoalbum.com
+                          
+                          </p>
+                 
+          </div>
+          <div class="col-lg-3 col-sm-12">
+             
+                      <h4>Connect with Us on Social Media</h4>
+                      <p><a href="#">🔹 Facebook: facebook.com/PhotoAlbum<a></p>
+                      <p><a href="#">🔹 Instagram: instagram.com/PhotoAlbum</a></p>
+                      <p><a href="#">🔹 Twitter (X): twitter.com/PhotoAlbum</a></p>
+
+                 
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-sm-12">
+              <h4 class="mb-4 text-center">&copy; 2025 PhotoGallery | All rights reserved.</h4>
+          </div>
+      </div>
+  </div>
+</section>
+        
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script> 
+    
+</body>
+</html>

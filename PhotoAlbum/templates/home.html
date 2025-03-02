@@ -1,0 +1,432 @@
+<!-- practice -->
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Photo Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <style>
+       *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+        .navbar {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: white;
+    z-index: 1000;
+    }
+
+    
+    .navbar-brand{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family:'Dancing Script', cursive;
+    color: black;
+}
+
+    .navbar-brand:hover{
+        color: black;
+    }
+
+    .nav-link{
+        color: black;
+        margin-left: 60px;
+        text-transform: uppercase;
+    }
+
+    .nav-link:hover{
+        color: black;
+    }
+
+    .Search{
+        height: 40px;
+        width: 100%;
+        border-radius: 20px;
+        margin-right: -35px;
+        outline: none;
+        border: 2px solid rgb(255, 0, 81);
+    }
+    .btn0{
+        background-color:rgb(255, 0, 81);
+        height: 40px;
+        width:40%;
+        border-radius: 40px;
+        color: white;
+        border: none;
+    }
+
+    .main{
+        background-image: urlurl('/static/images/camera.png')no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        height: 100vh;
+        width: 100%;
+
+    }
+
+    .main h1{
+        font-size: 4rem;
+        padding-left: 50px;
+        padding-top: 100px;
+        width: 60%;
+        font-weight: 700;
+        color: black;
+    }
+
+    .btn1{
+        background-color: rgb(255, 0, 81);
+        height: 45px;
+        width: 12%;
+        border-radius: 60px;
+        color: white;
+        border: none;
+        font-weight: 700;
+    }
+
+.btn1:hover{
+    background-color:rgb(214, 9, 74);
+
+}
+    .rounded-circle{
+        height: 200px;
+        width: 200px;
+        margin-top: 50px;
+        margin-left: 85px;
+    }
+    h1{
+        font-weight: 700;
+    }
+    .card{
+        margin-bottom: 20px;
+        height: 350px;
+        width:100%;
+    }
+    .card-img-top{
+        height: 300px;
+        width: 100%;
+    }
+    .card:hover{
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        transition: 0.5s;
+    }
+    .abt{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; 
+        text-align: right; 
+        padding: 50px; 
+        margin-right: 50px;
+    }
+    .custom-link {
+    color: rgb(228, 228, 151); /* Change link color */
+    text-decoration: none; /* Remove underline */
+  }
+    .form{
+        padding-left: 250px;
+        padding-right: 250px;
+    }
+    .card-body h5 {
+            font-size: 16px; /* Smaller font size */
+            font-weight: bold;
+            color: black;
+        }
+    
+        .card-body p {
+            font-size: 10px; /* Reduce paragraph font size */
+            color: black; /* Set text color to black */
+        }
+        .f1{
+            margin-bottom: 20px;
+            height: 180px;
+            width:100%; 
+        }
+        .black-section {
+            padding-top: 1px;
+            padding-bottom: 10px;
+            background-color: rgb(39, 32, 32);
+            color: white;
+            width:100%;
+            font-size: 12px;
+        }
+        
+    
+    </style>
+</head>
+<body>
+
+
+    
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid i">
+                <a class="navbar-brand" href="#">Photo Gallery</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/add">Add Image</a>
+                        </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#G2">About</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#G3">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control px-4 Search" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn0 btn-outline-success" type="submit">Search</button>
+                </form>
+                </div>
+            </div>
+        </nav>
+    
+        <section class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                        <div class="main" style="background-image: url('/static/images/camera.png')">
+                        <h1>Welcome to the Digital Photo Gallery </h1>
+                        <a href="#G1">
+                            <button class="btn1 mt-4 ms-5">Open Gallery</button>
+                        </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ============================================== -->
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                        <h1 class="text-center mt-5">Simpler. Faster. Smarter.</h1>
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-12">
+                                <img src="{% static 'images/Clogo.png' %}" class="rounded-circle" alt="Camera Logo">
+                                <h5>Capture</h5>
+                                <p>Showcase your stunning work in a beautifully crafted online gallery. Choose from built-in themes or customize your own.</p>
+
+                            </div>
+                            
+                            <div class="col-lg-4 col-sm-12">
+                                <img src="{% static 'images/storage.png' %}" class="rounded-circle" alt="Storage Logo">
+                                <h5>Store</h5>
+                                <p>Store all your full-resolution images. Your original photos are safe and secure, and always with you.</p>
+                            </div>
+                            
+                            <div class="col-lg-4 col-sm-12">
+                                <img src="{% static 'images/slogo.png' %}" class="rounded-circle" alt="Search Logo">
+                                <h5>Search & Organize</h5>
+                                <p>Find photos instantly with smart search, filters, and categories. Never lose track of your best shots.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+         
+        <section>
+            <div class="container">
+                <div class="row text-center mt-3">
+                    <div class="col-12">
+                        <h1 id="G1"> Photo Gallery</h1>
+                        <h6 style="color: rgb(255, 0, 81) ">Capture, Cherish, and Relive your memories</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-sm-12 text-center">
+                        <div class="card border-0 bg-light">
+                            <div class="card-body">
+                                <img src="{% static 'images/nature1.jpg' %}" class="card-img-top" alt="Image 1">
+                            </div>
+                        </div>
+                        <h6>Nature</h6>
+                    </div>
+                    <div class="col-lg-3 col-sm-12 text-center">
+                        <div class="card border-0 bg-light">
+                            <div class="card-body">
+                                <img src="{% static 'images/books.jpg' %}" class="card-img-top" alt="Image 1">
+                            </div>
+                        </div>
+                        <h6>Books</h6>
+
+                    </div>
+                    <div class="col-lg-3 col-sm-12 text-center">
+                        <div class="card border-0 bg-light">
+                            <div class="card-body">
+                                <img src="{% static 'images/flower.jpg' %}" class="card-img-top" alt="Image 1">
+                            </div>
+                        </div>
+                        <h6>Flowers</h6>
+
+                    </div>
+                    <div class="col-lg-3 col-sm-12 text-center">
+                        <div class="card border-0 bg-light">
+                            <div class="card-body">
+                                <img src="{% static 'images/fruit.jpg' %}" class="card-img-top" alt="Image 1">
+                            </div>
+                        </div>
+                        <h6>Food</h6>
+
+                    </div>
+                </div>                
+           <div class="row text-center">
+            <a href="/gallery">
+                <button class="btn1 my-4 ms-5">Click for more</button>
+            </a>
+           </div>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+
+         <section>
+            <div class="container-fluid">
+                <div class="row my-4">
+                    <div class="col-sm-12">
+                        <div class="main" style="background-image: url('/static/images/main2.jpg')">
+                            <div class="abt">
+                        <h1 id="G2">Know More About Us</h1>
+                        <h6>Discover how PhotoAlbum helps you store, organize,
+                             and showcase your photos effortlessly.</h6> 
+                             <h6>Explore our features and start uploading your favorite moments today!</h6>
+                               <button class="btn1  mt-4 ms-5">Know more</button>
+                             
+                        </div>
+                        
+                    </div>
+                    </div>
+                </div>
+            </div>
+         </section>
+
+         <!-- ============================================== -->
+
+         <section>
+            <div class="container my-4">
+                <div class="row text-center">
+                    <div class="col-sm-12">
+                          <h1 id="G3">Contact Us</h1>   
+                          <h6 style="color:rgb(255, 0, 81)">Always be in touch with us</h6>
+                    </div>
+                </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="form">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="First Name">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm-6">
+                                <input type="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="Phone">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm-12">
+                                <textarea class="form-control" placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-sm-12">
+                                
+                            <button class="btn1 mt-4 ms-5">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+         </section>
+
+         <!-- ============================================== -->
+
+         <section class="black-section mt-5">
+            
+            <div class="container mt-5">
+                <div class="row mt-5">
+                    <div class="col-lg-3 col-sm-12">
+                       
+                                <h5> Customer Care
+                                </h5>
+                                <p>Need help? Our support team is available 24/7 to assist you.</p>
+                                
+                                <p>📧 Email: support@photoalbum.com</p>
+                                <p>📞 Phone: +1 234 567 890</p>
+                               
+                            
+                    </div>
+                    <div class="col-lg-3 col-sm-12">
+                        
+                                <h5> FAQs1
+                                    </h5>
+                                    <p>🔹<b> How do I upload photos?</b></p>
+                                      <p>  Go to the Upload section, select your images, and click Submit.</p>
+                                        <p>🔹<b>How do I contact support?</b></p>
+                                        <p>Email us at support@photoalbum.com  </p>
+                            
+                    </div>
+                    <div class="col-lg-3 col-sm-12">
+                        
+                               <h5>Our Company</h5>
+                               <p>PhotoAlbum is a leading digital photo storage and sharing platform. 
+                                We help users upload, organize, and share their favorite moments effortlessly.</p>
+                                <p>
+                                    🌐 Website: www.photoalbum.com
+                                </p>
+                           
+                    </div>
+                    <div class="col-lg-3 col-sm-12">
+                        
+                                <h5>Connect with Us on Social Media</h5>
+                                <p><a href="#" class="custom-link">🔹 Facebook: facebook.com/PhotoAlbum<a></p>
+                                <p><a href="#" class="custom-link">🔹 Instagram: instagram.com/PhotoAlbum</a></p>
+                                <p><a href="#" class="custom-link">🔹 Twitter (X): twitter.com/PhotoAlbum</a></p>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 pt-4">
+                        <h4 class="mb-0 text-center">&copy; 2025 PhotoGallery | All rights reserved.</h4>
+                    </div>
+                </div>
+            </div>
+         </section> 
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script> 
+        
+  </body>
+</body>
+</html>
+
+
