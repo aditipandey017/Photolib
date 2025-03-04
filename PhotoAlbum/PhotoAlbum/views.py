@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-# from django.http import HttpResponse
+from django.http import HttpResponse
 from django.core.files.storage import FileSystemStorage
 from django.conf import settings
 
@@ -54,3 +54,6 @@ def about(request):
 def contact(request):
    
     return render(request, 'contact.html') 
+
+def search(request):
+    return HttpResponse("This is the search page.")
