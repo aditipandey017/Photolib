@@ -9,6 +9,8 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
         *{
             padding: 0;
@@ -145,13 +147,12 @@
                 width:100%; 
             }
             .black-section {
-           
-            background-color: rgb(39, 32, 32);
-            color: white;
-            width:100%;
-            font-size: 12px;
-        }
-        
+                background-color: rgb(39, 32, 32);
+                color: white;
+                width:100%;
+                font-size: 12px;
+                
+            }
             .black-section .card {
                 background-color: grey; 
             }
@@ -183,8 +184,8 @@
                     <a class="nav-link" href="/contact">Contact</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control px-4 Search" type="search" placeholder="Search" aria-label="Search">
+                <form method="get" action="{% url 'search' %}" class="d-flex" role="search">
+                    <input class="form-control px-4 Search" type="search" placeholder="Search" aria-label="Search" name="query">
                     <button class="btn0 btn-outline-success" type="submit">Search</button>
                 </form>
                 </div>
@@ -212,12 +213,7 @@
        
         <section>
             <div class="container">
-                <div class="row text-center mt-3">
-                    <div class="col-12">
-                        <h1 id="G1"> Photo Gallery</h1>
-                        <h6 style="color: rgb(255, 0, 81) ">Capture, Cherish, and Relive your memories</h6>
-                    </div>
-                </div>
+                
                 <div class="row">
                     <div class="col-lg-3 col-sm-12 text-center">
                         <div class="card border-0 bg-light">
@@ -254,7 +250,7 @@
                         <h6>Food</h6>
 
                     </div>
-                </div>                
+                </div>   
                 
                 <div class="row">
                     <div class="col-lg-3 col-sm-12 text-center">
@@ -298,7 +294,7 @@
                     <div class="col-lg-3 col-sm-12 text-center">
                         <div class="card border-0 bg-light">
                             <div class="card-body">
-                                <img src="{% static 'images/img2.jpg' %}" class="card-img-top" alt="Image 1">
+                                <img src="{% static 'images/jet.jpg' %}" class="card-img-top" alt="Image 1">
                             </div>
                         </div>
                         <h6>Fighter Jet</h6>
@@ -331,17 +327,17 @@
                                 </h4>
                                 <p>Need help? Our support team is available 24/7 to assist you.</p>
                                 
-                                <p>📧 Email: support@photoalbum.com</p>
-                                <p>📞 Phone: +1 234 567 890</p>
+                                <p><i class="fa-solid fa-envelope"></i> Email: support@photoalbum.com</p>
+                                <p><i class="fa-solid fa-phone"></i> Phone: +1 234 567 890</p>
                             
                     </div>
                     <div class="col-lg-3 col-sm-12">
                         
                                 <h4> FAQs
                                     </h4>
-                                    <p>🔹<b> How do I upload photos?</b>
+                                    <p><i class="fa-solid fa-diamond-turn-right"></i><b> How do I upload photos?</b>
                                         Go to the Upload section, select your images, and click Submit.</p>
-                                        <p>🔹<b>How do I contact support?</b>
+                                        <p><i class="fa-solid fa-diamond-turn-right"></i><b> How do I contact support?</b>
                                             Email us at support@photoalbum.com </p>
                            
                     </div>
@@ -351,7 +347,7 @@
                                <p>PhotoAlbum is a leading digital photo storage and sharing platform. 
                                 We help users upload, organize, and share their favorite moments effortlessly.</p>
                                 <p>
-                                    🌐 Website: www.photoalbum.com
+                                    <i class="fa-solid fa-globe"></i> Website: www.photoalbum.com
                                     
                                     </p>
                            
@@ -359,10 +355,11 @@
                     <div class="col-lg-3 col-sm-12">
                        
                                 <h4>Connect with Us on Social Media</h4>
-                                <p><a href="#">🔹 Facebook: facebook.com/PhotoAlbum<a></p>
-                                <p><a href="#">🔹 Instagram: instagram.com/PhotoAlbum</a></p>
-                                <p><a href="#">🔹 Twitter (X): twitter.com/PhotoAlbum</a></p>
-      
+                                <div class="link">
+                                <p><a href="#"style="color:white"><i class="fa-brands fa-facebook"></i> Facebook<a></p>
+                                <p><a href="#"style="color:white"><i class="fa-brands fa-instagram"></i> Instagram</a></p>
+                                <p><a href="#"style="color:white"><i class="fa-brands fa-twitter"></i> Twitter</a></p>
+                                </div>
                            
                     </div>
                 </div>

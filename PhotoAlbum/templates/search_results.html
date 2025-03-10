@@ -1,0 +1,275 @@
+{% comment %} {% load static %}
+<h2>Search Results</h2>
+
+<p>Showing results for: <strong>{{ query }}</strong></p>
+
+{% if results %}
+    <ul>
+        {% for item in results %}
+            <li>
+                <img src="{% static 'images/' %}{{ item.image }}" alt="{{ item.name }}" style="width: 50px; height: 50px;">
+                {{ item.name }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No results found.</p>
+{% endif %} {% endcomment %}
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: white;
+            position: fixed;
+            z-index: 1000;
+            top: 0; 
+            width: 100%; 
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: 'Dancing Script', cursive;
+            color: black;
+        }
+
+        .navbar-brand:hover {
+            color: black;
+        }
+
+        .nav-link {
+            color: black;
+            margin-left: 60px;
+            text-transform: uppercase;
+        }
+
+        .nav-link:hover {
+            color: black;
+        }
+
+        .Search {
+            height: 40px;
+            width: 100%;
+            border-radius: 20px;
+            margin-left: 400px;
+            margin-right: -35px;
+            outline: none;
+            border: 2px solid rgb(255, 0, 81);
+        }
+
+        .btn0 {
+            background-color: rgb(255, 0, 81);
+            height: 40px;
+            width: 40%;
+            border-radius: 40px;
+            color: white;
+            border: none;
+        }
+
+        .main1 {
+            background-image: url('/static/images/camera.png');
+            background-size: cover;
+            background-position: 50% 50%;
+            width: 100%;
+        }
+
+        .main1 h1 {
+            font-size: 3rem;
+            padding-left: 50px;
+            padding-top: 100px;
+            width: 60%;
+            font-weight: 700;
+            color: black;
+        }
+
+        
+        .footer-items h4, .footer-items p {
+            color: white;
+        }
+
+        .footer-items {
+            background-color: rgb(39, 32, 32);
+            color: white;
+        }
+
+        .footer-items .col-lg-3 {
+            padding: 20px;
+        }
+
+        .card-body{
+            height:350px;
+            width: 300px;
+            align-items: center;
+        }
+        
+
+        .card-img-top {
+            object-fit: cover;
+        }
+
+        .search-results {
+            margin-top: 100px;
+            align-items: center;
+            height:350px;
+            width: 300px;
+        }
+        .black-section {
+            background-color: rgb(39, 32, 32);
+            color: white;
+            width:100%;
+            height:40vh;
+        }
+        .gallery{
+            height: 500px;
+            margin-top: 100px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Photo Gallery</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/add">Add Image</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+                <form method="get" action="{% url 'search' %}" class="d-flex" role="search">
+                    <input class="form-control px-4 Search" type="search" placeholder="Search" aria-label="Search" name="query">
+                    <button class="btn0 btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Results Section -->
+     <div class="row ">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 gallery">
+   
+        
+        <h1 style="text-align: center">Search Results</h1>
+        <h3 style="text-align: center">Showing results for: <strong>{{ query }}</strong></h3>
+
+        {% if results %}
+
+            {% for item in results %}
+            <div class="card-body" style="display: flex; justify-content: center; align-items: center;">
+                <img src="{% static 'images/' %}{{ item.image }}"  alt="{{ item.name }}" class="card-img-top" >
+            </div>
+                    
+                    <div>
+                                
+                    <h3 style="text-align: center"><b>{{ item.name }}</b></h3>
+                    </div>
+            {% endfor %}
+        
+        {% else %}
+        <p>No results found.</p>
+        {% endif %}
+ 
+</div>
+<div class="col-sm-4"></div>
+</div>
+
+    <div class="row">
+        <div class="col-sm-12 black-section">
+            <div class="container footer-items pt-3">
+                <div class="row ">
+                    <div class="col-lg-3 col-sm-12">
+                       
+                                <h4> Customer Care
+                                </h4>
+                                <p>Need help? Our support team is available 24/7 to assist you.</p>
+                                
+                                <p><i class="fa-solid fa-envelope"></i> Email: support@photoalbum.com</p>
+                                <p><i class="fa-solid fa-phone"></i> Phone: +1 234 567 890</p>
+                            
+                    </div>
+                    <div class="col-lg-3 col-sm-12">
+                        
+                                <h4> FAQs
+                                    </h4>
+                                    <p><i class="fa-solid fa-diamond-turn-right"></i><b> How do I upload photos?</b>
+                                        Go to the Upload section, select your images, and click Submit.</p>
+                                        <p><i class="fa-solid fa-diamond-turn-right"></i><b> How do I contact support?</b>
+                                            Email us at support@photoalbum.com </p>
+                           
+                    </div>
+                    <div class="col-lg-3 col-sm-12">
+                        
+                               <h4>Our Company</h4>
+                               <p>PhotoAlbum is a leading digital photo storage and sharing platform. 
+                                We help users upload, organize, and share their favorite moments effortlessly.</p>
+                                <p>
+                                    <i class="fa-solid fa-globe"></i> Website: www.photoalbum.com
+                                    
+                                    </p>
+                           
+                    </div>
+                    <div class="col-lg-3 col-sm-12">
+                       
+                                <h4>Connect with Us on Social Media</h4>
+                                <div class="link">
+                                <p><a href="#"style="color:white"><i class="fa-brands fa-facebook"></i> Facebook<a></p>
+                                <p><a href="#"style="color:white"><i class="fa-brands fa-instagram"></i> Instagram</a></p>
+                                <p><a href="#"style="color:white"><i class="fa-brands fa-twitter"></i> Twitter</a></p>
+                                </div>
+                           
+                    </div>
+                </div>
+      
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4 class="mb-4 text-center">&copy; 2025 PhotoGallery | All rights reserved.</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+       
+    <!-- Bootstrap and Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
