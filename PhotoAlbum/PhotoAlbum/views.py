@@ -47,6 +47,17 @@ def about(request):
     return render(request, 'about.html') 
 
 def contact(request):
+    if request.method == "POST":
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        message = request.POST.get('message')
+
+        new_contact = contact(first_name=first_name, last_name=last_name, email=email, phone=phone, message=message)
+        new_contact.save()
+
+        return HttpResponse("<h3>Your message has been sent successfully. We will get back to you soon.</h3>")
    
     return render(request, 'contact.html') 
 
