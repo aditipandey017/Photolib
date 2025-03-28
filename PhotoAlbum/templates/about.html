@@ -9,7 +9,8 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
- 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
       <style>
         body, html {
           height: 100%;
@@ -118,35 +119,35 @@
 </head>
 <body>
   
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Photo Gallery</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                    <a class="nav-link active" href="/home">Home</a>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Photo Gallery</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link active" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/gallery">Gallery</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/add">Add Image</a>
-                        </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    
+                <li class="nav-item">
+                    <a class="nav-link active" href="/add">Add Image</a>
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="/contact">Contact</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control px-4 Search" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn0 btn-outline-success" type="submit">Search</button>
-                </form>
-                </div>
+                <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact</a>
+                </li>
+            </ul>
             </div>
-        </nav>
-
+        </div>
+    </nav>
+    
         <div class="parallax"></div>
 
         <div style=" background-color:white;color: black;font-size:20px">
@@ -158,9 +159,11 @@
           Our curated collections feature a diverse range of genres, from breathtaking landscapes and intimate portraits to bold abstracts and thought-provoking documentary pieces. Each image tells its own story, inviting you to explore new worlds, emotions, and narratives through the power of photography.
           
           At Digital Photo Gallery, we believe that photography is more than just an image—it's a window into different cultures, ideas, and experiences. Our platform allows you to connect with these stories and immerse yourself in the transformative power of visual art. Whether you're here to admire, purchase, or learn more about the photographers behind the lens, we welcome you to embark on a journey of discovery and creativity.  
-          <h2>Our Mission </h2>
+        </p>
+        <h2><p>Our Mission </p></h2>
           <p>
            At Digital Photo Gallery, we believe in the power of photography to capture moments, emotions, and stories. Our mission is to make beautiful, thought-provoking images accessible to all, providing a space where creativity can flourish and photography can connect people across cultures and continents.</p>
+        
            <h2>What We Offer</h2>
            <p>
              <ul>
@@ -169,65 +172,66 @@
                <li><b>Artist Spotlights:</b> Get to know the photographers behind the lens with exclusive artist profiles and insights into their work.</li>
            
                </p>
+               
         </div>
         </div>
 
+        <!-- ================================================ -->
 
-
-<section class="black-section mt-5">
+        <section class="black-section mt-5">
             
-  <div class="container mt-5 footer-items">
-      <div class="row mt-5 py-4">
-          <div class="col-lg-3 col-sm-12">
-             
-                      <h4> Customer Care
-                      </h4>
-                      <p>Need help? Our support team is available 24/7 to assist you.</p>
-                      
-                      <p>📧 Email: support@photoalbum.com</p>
-                      <p>📞 Phone: +1 234 567 890</p>
-                  
-          </div>
-          <div class="col-lg-3 col-sm-12">
-              
-                      <h4> FAQs
-                          </h4>
-                          <p>🔹<b> How do I upload photos?</b>
-                              Go to the Upload section, select your images, and click Submit.</p>
-                              <p>🔹<b>How do I contact support?</b>
-                                  Email us at support@photoalbum.com </p>
-                 
-          </div>
-          <div class="col-lg-3 col-sm-12">
-              
-                     <h4>Our Company</h4>
-                     <p>PhotoAlbum is a leading digital photo storage and sharing platform. 
-                      We help users upload, organize, and share their favorite moments effortlessly.</p>
-                      <p>
-                          🌐 Website: www.photoalbum.com
-                          
-                          </p>
-                 
-          </div>
-          <div class="col-lg-3 col-sm-12">
-             
-                      <h4>Connect with Us on Social Media</h4>
-                      <p><a href="#">🔹 Facebook: facebook.com/PhotoAlbum<a></p>
-                      <p><a href="#">🔹 Instagram: instagram.com/PhotoAlbum</a></p>
-                      <p><a href="#">🔹 Twitter (X): twitter.com/PhotoAlbum</a></p>
-
-                 
-          </div>
-      </div>
-
-      <div class="row">
-          <div class="col-sm-12">
-              <h4 class="mb-4 text-center">&copy; 2025 PhotoGallery | All rights reserved.</h4>
-          </div>
-      </div>
-  </div>
-</section>
-        
+            <div class="container mt-3 footer-items">
+                <div class="row mt-3 py-4">
+                    <div class="col-lg-3 col-sm-12">
+                       
+                                <h4> Customer Care
+                                </h4>
+                                <p>Need help? Our support team is available 24/7 to assist you.</p>
+                                
+                                <p><i class="fa-solid fa-envelope"></i> Email: support@photoalbum.com</p>
+                                <p><i class="fa-solid fa-phone"></i> Phone: +1 234 567 890</p>
+                            
+                    </div>
+                    <div class="col-lg-3 col-sm-12">
+                        
+                                <h4> FAQs
+                                    </h4>
+                                    <p><i class="fa-solid fa-diamond-turn-right"></i><b> How do I upload photos?</b>
+                                        Go to the Upload section, select your images, and click Submit.</p>
+                                        <p><i class="fa-solid fa-diamond-turn-right"></i><b> How do I contact support?</b>
+                                            Email us at support@photoalbum.com </p>
+                           
+                    </div>
+                    <div class="col-lg-3 col-sm-12">
+                        
+                               <h4>Our Company</h4>
+                               <p>PhotoAlbum is a leading digital photo storage and sharing platform. 
+                                We help users upload, organize, and share their favorite moments effortlessly.</p>
+                                <p>
+                                    <i class="fa-solid fa-globe"></i> Website: www.photoalbum.com
+                                    
+                                    </p>
+                           
+                    </div>
+                    <div class="col-lg-3 col-sm-12">
+                       
+                                <h4>Connect with Us on Social Media</h4>
+                                <div class="link">
+                                <p><a href="#"style="color:white"><i class="fa-brands fa-facebook"></i> Facebook<a></p>
+                                <p><a href="#"style="color:white"><i class="fa-brands fa-instagram"></i> Instagram</a></p>
+                                <p><a href="#"style="color:white"><i class="fa-brands fa-twitter"></i> Twitter</a></p>
+                                </div>
+                           
+                    </div>
+                </div>
+      
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4 class="mb-4 text-center">&copy; 2025 PhotoGallery | All rights reserved.</h4>
+                    </div>
+                </div>
+            </div>
+         </section>
 
     
 

@@ -99,6 +99,7 @@
     .btn1:hover{
         background-color:rgb(214, 9, 74);
     }
+    
     .rounded-circle{
         height: 200px;
         width: 200px;
@@ -122,7 +123,7 @@
         transition: 0.5s;
     }
     .abt{
-        display: flex;
+        display: flex; 
         flex-direction: column;
         align-items: flex-end; 
         text-align: right; 
@@ -164,17 +165,21 @@
     </style>
 </head>
 <body>    
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid i">
+         <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="#">Photo Gallery</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                     <a class="nav-link active" href="#">Home</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#G1">Gallery</a>
+                        </li>
+                        
                     <li class="nav-item">
                         <a class="nav-link active" href="/add">Add Image</a>
                         </li>
@@ -185,10 +190,6 @@
                     <a class="nav-link" href="#G3">Contact</a>
                     </li>
                 </ul>
-                <form method="get" action="/search" class="d-flex" role="search">
-                    <input class="form-control px-4 Search" type="search" placeholder="Search" aria-label="Search" name="search" id="search">
-                    <button class="btn0 btn-outline-success" type="submit">Search</button>
-                </form>
                 </div>
             </div>
         </nav>
@@ -309,10 +310,12 @@
                         <h6>Discover how PhotoAlbum helps you store, organize,
                              and showcase your photos effortlessly.</h6> 
                              <h6>Explore our features and start uploading your favorite moments today!</h6>
-                               <button class="btn1  mt-4 ms-5">Know more</button>
-                             
-                        </div>
-                        
+                                <a href="/about">
+                                <button class="btn mt-4 ms-5" style="width:75%; margin-right: 20px;">                               
+                               Know more                                    
+                                </button>  
+                            </a>          
+                           </div>                                     
                     </div>
                     </div>
                 </div>
@@ -369,7 +372,7 @@
          <section class="black-section mt-5">
             
             <div class="container mt-5 footer-items">
-                <div class="row mt-5 py-4">
+                <div class="row mt-3 py-3">
                     <div class="col-lg-3 col-sm-12">
                        
                                 <h4> Customer Care

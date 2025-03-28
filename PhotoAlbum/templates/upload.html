@@ -156,12 +156,12 @@
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
-            background-color:rgb(227, 237, 240);
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
             width:600px;
-            height:400px;
+            height:400px; 
+            text-align: center;
+            height: auto;
+            padding-top: 40px;
         }
         .upload{
             padding-top:45px;
@@ -195,10 +195,13 @@
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                     <a class="nav-link active" href="/home">Home</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/gallery">Gallery</a>
+                        </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="/add">Add Image</a>
                         </li>
@@ -209,23 +212,19 @@
                     <a class="nav-link" href="/contact">Contact</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control px-4 Search" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn0 btn-outline-success" type="submit">Search</button>
-                </form>
                 </div>
             </div>
-        </nav>
+        </nav> 
 
         <!-- ============================================== -->
 
         <section class="upload">
             <div class="container upload-img">
-                <h1 style="padding-top:50px">Uploaded Image</h1>
+                <h1 style="padding-top:20px">Uploaded Image</h1>
         
                 {% if uploaded_image %}
                     <div class="image-container">
-                        <img src="{% static 'uploaded_image.image_url' %}" alt="Uploaded Image" class="uploaded-image">
+                        <img src='{{ uploaded_image.image_url}}' alt="Uploaded Image" class="uploaded-image">
                         <p class="description"><strong>Category:</strong> {{ uploaded_image.category }}</p>
                         <p class="description"><strong>Description:</strong> {{ uploaded_image.description }}</p>
                     </div>
@@ -236,13 +235,13 @@
         
         </section>
 
-        
+           
          <!-- ============================================== -->
 
-         <section class="black-section mt-2">
+         <section class="black-section mt-4 ">
             
-            <div class="container mt-5 footer-items">
-                <div class="row mt-5 py-4">
+            <div class="container mt-3 footer-items">
+                <div class="row mt-3 py-3">
                     <div class="col-lg-3 col-sm-12">
                        
                                 <h4> Customer Care
