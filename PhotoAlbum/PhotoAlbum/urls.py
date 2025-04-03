@@ -31,12 +31,9 @@ urlpatterns = [
     path('show_uploaded_image/', views.show_uploaded_image, name='show_uploaded_image'),
     path('about/', views.about),
     path('contact/', views.contact),
-    path('search/', views.search, name='search'),
-     
-      
+    path('search/', views.search, name='search'),     
 ]
 
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-

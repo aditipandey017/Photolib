@@ -42,8 +42,7 @@ def show_uploaded_image(request):
     return render(request, 'upload.html', {'uploaded_image': uploaded_image})
 
 
-def about(request):
-   
+def about(request):   
     return render(request, 'about.html') 
 
 # def contact(request):
@@ -73,15 +72,15 @@ from django.shortcuts import render
 # list of items to search
 items = [
     
-   {"name": "nature", "image": "beach.jpg"},
-    {"name": "people", "image": "peoplea.jpg"},
-    {"name": "animals", "image": "animala.jpg"},
-    {"name": "food", "image": "fruits.jpg"},
+   {"name": "nature", "image": "nature1.jpg"},
+    {"name": "people", "image": "people.jpg"},
+    {"name": "animals", "image": "panda.jpg"},
+    {"name": "food", "image": "fruit.jpg"},
     {"name": "flowers", "image": "flower.jpg"},
-    {"name": "books", "image": "books1.jpg"},
-    {"name": "architecture", "image": "architecture.jpg"},
+    {"name": "books", "image": "books.jpg"},
+    {"name": "architecture", "image": "archi.jpg"},
     {"name": "digital art", "image": "digiart.jpg"},
-    {"name": "fighter jets", "image": "img2.jpg"},
+    {"name": "fighter jets", "image": "jet.jpg"},
     {"name": "others", "image": "others.jpg"},
 
 

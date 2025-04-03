@@ -159,7 +159,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" href="/home">Home</a>
                     </li>
@@ -167,16 +167,15 @@
                         <a class="nav-link active" href="/add">Add Image</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link active" href="/gallery">Gallery</a>
+                        </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="/about">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">Contact</a>
                     </li>
                 </ul>
-                <form method="get" action="{% url 'search' %}" class="d-flex" role="search">
-                    <input class="form-control px-4 Search" type="search" placeholder="Search" aria-label="Search" name="query">
-                    <button class="btn0 btn-outline-success" type="submit">Search</button>
-                </form>
             </div>
         </div>
     </nav>
@@ -230,7 +229,7 @@
                                 <h4> FAQs
                                     </h4>
                                     <p><i class="fa-solid fa-diamond-turn-right"></i><b> How do I upload photos?</b>
-                                        Go to the Upload section, select your images, and click Submit.</p>
+                                        Go to the Add Image section, select your image, and click Submit.</p>
                                         <p><i class="fa-solid fa-diamond-turn-right"></i><b> How do I contact support?</b>
                                             Email us at support@photoalbum.com </p>
                            
